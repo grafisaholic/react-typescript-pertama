@@ -12,7 +12,7 @@ function Layout({ children }: PropsLayout) {
 
       <main className="w-full h-full mt-[70px]">
         <section className="max-w-4xl mx-auto lg:px-8 dark:text-gray-300">
-          <div className="space-y-3 divide-y font-mono p-3">{children}</div>
+          <div className="space-y-3 divide-y font-sans p-3">{children}</div>
         </section>
       </main>
     </div>

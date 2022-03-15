@@ -19,7 +19,7 @@ function Navbar() {
                     {routes.map((r) => (
                       <Link key={r.name} to={r.path}>
                         <span
-                          className="bg-gray-900 text-white px-3 py-2 rounded-md text-sm font-medium"
+                          className="bg-gray-500 text-white px-3 py-2 rounded-md text-sm font-medium"
                           aria-current="page"
                         >
                           {r.name}
