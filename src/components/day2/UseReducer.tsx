@@ -21,9 +21,7 @@ type ResetAction = {
   type: 'reset'
 }
 
-// end
-
-type CounterAction = UpdateAction | ResetAction
+type CounterAction = UpdateAction | ResetAction // using 2 conditonal types
 
 function reducer(state: CounterState, action: CounterAction) {
   switch (action.type) {

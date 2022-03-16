@@ -1,5 +1,5 @@
 import React, { Fragment } from 'react'
-import Advanced from './advanced'
+import Advanced from './Advanced'
 import Great from './great'
 
 function PropsFundamentals() {
