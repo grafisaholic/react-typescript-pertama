@@ -1,12 +1,18 @@
 import React from "react";
-import { Link } from "react-router-dom";
-
+import { NavLink } from "react-router-dom";
+import { useAuth } from '../day6/context/user'
 const routes = [
-  { name: "Home", path: "/" },
-  { name: "Blogs", path: "/blogs" },
-  { name: "Projects", path: "/projects" },
+  { name: "Day 1", path: "/" },
+  { name: "Day 2", path: "/day2" },
+  { name: "Day 3", path: "/day3" },
+  { name: "Day 4", path: "/day4" },
+  { name: "Day 5", path: "/day5" },
+  { name: "About", path: "/about" },
+  { name: "Profile", path: "/profile" },
 ];
 function Navbar() {
+  const { user } = useAuth()
+
   return (
     <header className="fixed top-0 w-full shadow-lg bg-white text-black z-20">
       <nav>
@@ -17,14 +23,14 @@ function Navbar() {
                 <div className="flex items-center">
                   <div className="ml-10 flex items-baseline space-x-4">
                     {routes.map((r) => (
-                      <Link key={r.name} to={r.path}>
+                      <NavLink key={r.name} to={r.path}>
                         <span
                           className="bg-gray-500 text-white px-3 py-2 rounded-md text-sm font-medium"
                           aria-current="page"
                         >
                           {r.name}
                         </span>
-                      </Link>
+                      </NavLink>
                     ))}
                   </div>
                 </div>
