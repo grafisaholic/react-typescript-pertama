@@ -1,18 +1,16 @@
-import React from "react";
 import { NavLink } from "react-router-dom";
-import { useAuth } from '../day6/context/user'
+
 const routes = [
   { name: "Day 1", path: "/" },
   { name: "Day 2", path: "/day2" },
   { name: "Day 3", path: "/day3" },
   { name: "Day 4", path: "/day4" },
   { name: "Day 5", path: "/day5" },
+  { name: "Redux", path: "/redux" },
   { name: "About", path: "/about" },
   { name: "Profile", path: "/profile" },
 ];
 function Navbar() {
-  const { user } = useAuth()
-
   return (
     <header className="fixed top-0 w-full shadow-lg bg-white text-black z-20">
       <nav>

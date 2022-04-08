@@ -6,12 +6,17 @@ import Day3 from './components/day3';
 import Day4 from './components/day4';
 import Day5 from './components/day5';
 import Day6 from './components/day6/Profile';
+import Day7 from './components/day7';
+
 import Feature from './components/day5/nested-route/Feature';
 import New from './components/day5/nested-route/New';
 import Layout from "./components/layout";
-import { AuthProvider } from './components/day6/context/user';
-import { PrivateRoute } from './components/day6/PrivateRoute'
 import Login from './components/day6/Login';
+
+import { AuthProvider } from './components/day6/context/user';
+import { PrivateRoute } from './components/day6/PrivateRoute';
+import { Provider } from 'react-redux';
+import store from './redux/store';
 
 const LazyPage = React.lazy(() => import('./components/day5/LazyLoaded'));
 
@@ -30,6 +35,11 @@ const routes = [
     ]
   },
   { name: "Day 6", path: "/profile", element: <Day6 /> },
+  {  
+    name: "Redux", 
+    path: "/redux", 
+    element: <Provider store={store}><Day7 /></Provider> 
+  },
 ]
 
 function App() {
